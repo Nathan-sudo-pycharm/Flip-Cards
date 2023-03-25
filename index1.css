@@ -1,0 +1,72 @@
+body {
+	font-family: Arial, sans-serif;
+	background: linear-gradient(to bottom right, #ff5f6d, #ffc371, #e5ff87, #b2ffb9, #7af5ff, #c4b8d4);
+	animation: gradient 15s ease infinite;
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+img{
+    align-items: center;
+    justify-items: center;
+    display: flex;
+    border-radius: 1rem;
+}
+.flip-card {
+    background-color: transparent;
+    width: 190px;
+    height: 254px;
+    perspective: 1000px;
+    font-family: sans-serif;
+  }
+  
+  .title {
+    font-size: 1.5em;
+    font-weight: 900;
+    text-align: center;
+    margin: 0;
+  }
+  
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+ .flip-card-front, .flip-card-back {
+    box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border: 1px solid coral;
+    border-radius: 1rem;
+  }
+  
+  .flip-card-front {
+    background: linear-gradient(120deg, bisque 60%, rgb(255, 231, 222) 88%, rgb(255, 211, 195) 40%, rgba(255, 127, 80, 0.603) 48%, #a64200 100%);
+    color: coral;
+  }
+  
+  .flip-card-back {
+    background: linear-gradient(120deg, rgb(14, 13, 13) 30%,
+     rgb(22, 21, 21) 88%, bisque 40%,
+      rgb(14, 14, 14) 78%,
+       #100f0f 100%);
+    color: rgb(215, 181, 31);
+    transform: rotateY(180deg);
+  }
